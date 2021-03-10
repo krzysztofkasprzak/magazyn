@@ -4,7 +4,7 @@ pipeline {
         stage ('Init'){
             steps {
                 script {
-                    currentBuild.description = "test"
+                    currentBuild.description = "test2"
                 }
             }
         }
