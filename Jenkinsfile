@@ -7,7 +7,9 @@ pipeline {
                 script {
                     currentBuild.description = "test2"
                 }
-                sh "touch ${COMMIT}"
+                sh "touch 2"
+                sh "touch 12"
+                archiveArtifacts artifacts: "2", "12"
             }
         }
     }
