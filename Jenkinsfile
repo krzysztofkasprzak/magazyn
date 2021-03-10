@@ -9,6 +9,7 @@ pipeline {
                 }
                 sh "touch 2.zip"
                 sh "touch 12.zip"
+                sh "ls -a"
                 archiveArtifacts artifacts: "*.zip"
             }
         }
