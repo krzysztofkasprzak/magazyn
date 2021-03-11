@@ -7,10 +7,11 @@ pipeline {
                 script {
                     currentBuild.description = "test2"
                 }
-                sh "touch 2.zip"
-                sh "touch 12.zip"
+                mkdir "test"
+                sh "touch test/2.zip"
+                sh "touch test/12.zip"
                 sh "ls -a"
-                archiveArtifacts artifacts: "*.zip"
+                archiveArtifacts artifacts: "test/*.zip"
             }
         }
     }
